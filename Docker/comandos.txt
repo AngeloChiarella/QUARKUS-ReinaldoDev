@@ -1,0 +1,12 @@
+Após configurar o docker-compose.yml, abra o cmd
+e digite os comandos para executar o arquivo e levantar o container
+
+Criar container:   	" docker-compose up -d "
+Listar as imagens: 	" docker-images "
+Ver instâncias rodando: " docker ps "
+Deletar container:      " docker stop {id} " ou " docker-compose down "
+
+Porta definida no docker-compose: 15672
+Acessar RabbitMQ em: http://localhost:15672
+user: admin
+pass: 123456
