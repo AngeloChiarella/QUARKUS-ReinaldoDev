@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.microservico.angelo.estoquepreco.constantes.RabbitMQConstantes;
-import com.microservico.angelo.estoquepreco.dto.PrecoDto;
 import com.microservico.angelo.estoquepreco.service.RabbitMQService;
+
+import constantes.RabbitMQConstantes;
+import dto.PrecoDto;
 
 @RestController
 @RequestMapping("/preco")

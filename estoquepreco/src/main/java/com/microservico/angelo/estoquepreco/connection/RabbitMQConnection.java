@@ -7,19 +7,20 @@ import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.stereotype.Component;
 
-import com.microservico.angelo.estoquepreco.constantes.RabbitMQConstantes;
-
+import constantes.RabbitMQConstantes;
 import jakarta.annotation.PostConstruct;
+import lombok.AllArgsConstructor;
 
 @Component
+@AllArgsConstructor
 public class RabbitMQConnection {
 
 	private static final String NOME_EXCHANGE = "amq.direct";
 	private AmqpAdmin amqpAdmin;
 
-	public RabbitMQConnection(AmqpAdmin amqpAdmin) {
-		this.amqpAdmin = amqpAdmin;
-	}
+//	public RabbitMQConnection(AmqpAdmin amqpAdmin) {
+//		this.amqpAdmin = amqpAdmin;
+//	}
 
 	private Queue fila(String nomeFila) {
 		return new Queue(nomeFila, true, false, false);
